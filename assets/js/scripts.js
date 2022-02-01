@@ -1,6 +1,8 @@
 var currentNumberWrapper = document.getElementById("currentNumber");
 
 var currentNumber = 0;
+var plusButton = document.getElementById("increment");
+var minusButton = document.getElementById("decrement");
 
 function increment() {
 	currentNumber = currentNumber + 1;
@@ -34,3 +36,7 @@ function disableButtons() {
 		document.getElementById("increment").disabled = false;
 	}
 }
+
+plusButton.addEventListener("click", increment);
+
+minusButton.addEventListener("click", decrement);
